@@ -1,0 +1,333 @@
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mochiy+Pop+P+One&family=Roboto+Mono:wght@500&family=Russo+One&family=Ubuntu&display=swap");
+
+/* set root variables */
+:root {
+  /* primary colors */
+  --lightGray: #bbbec4;
+  --lightBlue: #b8cfe6;
+  --whiteSmoke: whitesmoke;
+
+  /* secondary colors */
+  --antiqueWhite: antiquewhite;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  height: 100vh;
+}
+/* nav-bar styling */
+.nav-bar {
+  overflow: hidden;
+  background-color: dimgray;
+  display: flex;
+  justify-content: space-evenly;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+.logo {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-weight: 600;
+  color: rgb(107, 30, 30);
+  padding-left: 20px;
+  width: 35%;
+}
+.topnav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  list-style: none;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  padding-right: 20px;
+}
+.topnav li {
+  margin-left: 60px;
+  margin-right: 5px;
+}
+.topnav a {
+  text-decoration: none;
+  color: aquamarine;
+}
+.topnav a:hover {
+  color: darkred;
+  transition: all 0.3s ease;
+}
+
+/* home section styling */
+.home-section {
+  padding-top: 60px;
+  background-image: url("images/home_image.jpg");
+  background-size: cover;
+  background-size: 100% 100%;
+  height: 600px;
+  width: 100%;
+}
+.home-container {
+  display: grid;
+  grid-template-rows: 0px 400px;
+  text-align: center;
+}
+.home-section .home-container .header {
+  color: rgb(136, 103, 110);
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  padding-top: 330px;
+}
+/* about section styling */
+.about-intro {
+  grid-area: head;
+  background-color: var(--antiqueWhite);
+  top: auto;
+}
+.about-pic {
+  grid-area: image;
+  background-color: #ddd;
+  width: 95%;
+}
+.about-content {
+  grid-area: par;
+  width: 100%;
+  border: 5px solid;
+  padding-right: 0px;
+}
+
+#about {
+  display: grid;
+  grid-template-columns: auto 50% 40% auto;
+  grid-template-rows: 5em 40em;
+  grid-template-areas:
+    ". head head ."
+    ". image par .";
+}
+.about-pic img {
+  height: 95%;
+  width: 95%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+.about-intro header {
+  font-family: "Russo One", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 20px;
+}
+.about-content p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 150px;
+  padding-left: 10px;
+}
+/* species section styling */
+.species-intro {
+  grid-area: head;
+  background-color: var(--antiqueWhite);
+}
+.species-content {
+  grid-area: main;
+}
+#species {
+  display: grid;
+  grid-template-columns: auto 60% auto;
+  grid-template-rows: 5em 20em;
+  grid-template-areas:
+    "head head head"
+    ". main .";
+  gap: 10px;
+}
+.species-intro header {
+  font-family: "Russo One", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 20px;
+}
+.species-content ul {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 40px;
+  list-style: none;
+}
+.species-content li {
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* features and habitat section styling */
+.container-head {
+  grid-area: head;
+  background-color: var(--antiqueWhite);
+}
+.features-intro {
+  grid-area: fi;
+  background-color: darkgrey;
+}
+.habitat-intro {
+  grid-area: hi;
+  background-color: rgb(115, 139, 139);
+}
+.features-content {
+  grid-area: fc;
+  border: 5px solid darkgrey;
+  border-radius: 5px;
+}
+.habitat-content-left {
+  grid-area: hcl;
+  border: 5px solid rgb(115, 139, 139);
+  border-radius: 5px;
+}
+.habitat-content-right {
+  grid-area: hcr;
+  border: 5px solid rgb(115, 139, 139);
+  border-radius: 5px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 40% 29% 1fr;
+  grid-template-rows: 5em 3em 20em;
+  grid-template-areas:
+    "head head head"
+    "fi hi hi"
+    "fc hcl hcr";
+  gap: 5px;
+}
+.container-head header {
+  font-family: "Russo One", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 20px;
+}
+.features-intro header {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+.habitat-intro header {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+.features-content p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+.habitat-content-left header {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  background-color: rgb(115, 139, 139);
+}
+.habitat-content-left ol {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  text-align: justify;
+}
+.habitat-content-right header {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  background-color: rgb(115, 139, 139);
+}
+.habitat-content-right p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+/* media section styling */
+.media-header {
+  grid-area: mh;
+  background-color: var(--antiqueWhite);
+}
+.pic {
+  grid-area: pict;
+  border: 5px solid rgb(68, 97, 151);
+  display: grid;
+}
+.video {
+  grid-area: vid;
+  border: 5px solid rgb(28, 62, 124);
+  display: grid;
+}
+.media-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5em 30em;
+  grid-template-areas:
+    "mh mh"
+    "pict vid";
+  gap: 5px;
+}
+.media-header header {
+  font-family: "Russo One", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 20px;
+}
+.pic p {
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+}
+.pic img {
+  height: 80%;
+  border: 3px solid;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.video p {
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+}
+.video video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+footer {
+  background-color: dimgray;
+  color: aquamarine;
+  padding: 3px;
+  text-align: center;
+}
+footer p {
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+@media screen and (max-width: 1260px) {
+  .topnav li {
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 1110px) {
+  .topnav li {
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 955px) {
+  .topnav li {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .topnav li {
+    margin-left: 10px;
+  }
+}
